@@ -8,11 +8,17 @@ namespace AddressBookManagementSystem
         {
             Console.WriteLine("Welcome to The Address Book System");
             //PersonDetails  Details= new PersonDetails("ankita", "patil", "hjkl", "kolhapur", 7588, "Maharashtra",1234567891 , "ankitardeore.com");
-            PersonDetails details = new PersonDetails();
+            //PersonDetails details = new PersonDetails();
+            //details.AddDetails();
+            // details.ListingPeople();
 
-           details.AddDetails();
-            details.ListingPeople();
+         PersonDetails Details = new PersonDetails();
 
+            Details.AddDetails();
+
+
+            Details.editContact();
+            Details.ListingPeople();
         }
     }
 }
