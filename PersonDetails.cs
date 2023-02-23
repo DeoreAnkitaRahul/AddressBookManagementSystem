@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace AddressBookManagementSystem
 {
-    public class PersonDetails
+   public class PersonDetails
     {
-
-
-
-
-
-
         public class Person
         {
             public string FirstName;
@@ -29,7 +23,7 @@ namespace AddressBookManagementSystem
 
         public static List<Person> People = new List<Person>();
 
-        public void AddDetails()
+        public void addContact()
         {
             Person person = new Person();
 
@@ -146,6 +140,26 @@ namespace AddressBookManagementSystem
 
         }
 
+        public void deleteContact()
+        {
+            Console.WriteLine("\nEnter First Name of Contact to delete: ");
+
+            String fname = Console.ReadLine();
+
+            foreach (Person person in People.ToList())
+            {
+                if (person.FirstName.ToUpper() == fname.ToUpper())
+                {
+                    People.Remove(person);
+                    Console.WriteLine("The Contact is Deleted From list");
+                }
+                else
+                {
+                    Console.WriteLine("Contact not found");
+                }
+            }
+        }
+
         public void ListingPeople()
         {
             if (People.Count == 0)
@@ -161,6 +175,6 @@ namespace AddressBookManagementSystem
 
 
         }
-
     }
-   }
+}
+    

@@ -11,14 +11,16 @@ namespace AddressBookManagementSystem
             //PersonDetails details = new PersonDetails();
             //details.AddDetails();
             // details.ListingPeople();
+            PersonDetails person = new PersonDetails();
 
-         PersonDetails Details = new PersonDetails();
+            //----Adding Contact---//
+            person.addContact();
 
-            Details.AddDetails();
+            //------Deleting Contact----//
+            person.deleteContact();
+            person.ListingPeople();
 
 
-            Details.editContact();
-            Details.ListingPeople();
         }
     }
 }
